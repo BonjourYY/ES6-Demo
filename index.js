@@ -5,40 +5,26 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
-// 数组的解构赋值
-// let [firstName, , , lastName] = ['jack', 'fan', 'qin', 'yun'];
-// console.log(firstName, lastName);
+// 模板字符串
+// 多行
+console.log(`123
+123123
+2342342
+3453425`);
 
-// 对象的解构赋值
-// let options = {
-//   size: {
-//     width: 100,
-//     height: 200,
-//   },
-//   items: ['Cake', 'Donut'],
-//   extra: true,
-// };
+// 嵌入表达式
+let [a, b] = [5, 10];
+console.log(`a+b的结果是：${a + b}`);
 
-// let {
-//   size: { width: w, height: h },
-//   items: [item1, item2],
-//   title: t = 'demo',
-// } = options;
-// console.log(w, h, t, item1, item2);
+// 带标签的模板字符串
+let name = `JackFan`;
+let age = 24;
 
-// 函数的解构赋值
-function fn({
-  name: n = 'fanqinyang',
-  sex: s,
-  // items: [item1, item2, ...rest],
-}) {
-  console.log(n, s);
+function tag(strings, ...rest) {
+  console.log(rest);
+  return `${strings[0]}
+${rest}
+`;
 }
 
-let options = {
-  name: 'yun',
-  items: ['xxx1', 'xxx2', 'xxx3', 'xxx4'],
-};
-
-fn({ items: [] });
-
+console.log(tag`\u00A9${name}${age}and`);
