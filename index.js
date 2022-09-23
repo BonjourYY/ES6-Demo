@@ -5,22 +5,11 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
-let billion = 0x1e1b0;
-console.log(billion);
-// let num = 123312;
-console.log((123312).toString(36));
-
-// 关于舍入的方法
-let num = -1.5;
-// 向下舍入
-console.log(Math.floor(num));
-
-// 向上舍入
-console.log(Math.ceil(num));
-
-// 四舍五入
-// 恰好等于0.5时，往正无穷（+∞）方向上舍入
-console.log(Math.round(num));
-
-// 直接去除
-console.log(Math.trunc(num));
+// 为什么 0.1+0.2!=0.3 因为 精度缺失
+let result = Number((0.1).toString(2)) + Number((0.2).toString(2));
+console.log(result);
+// console.log(finalResult);
+// let finalResult = 0b0.30000000000000004
+console.log((9999999999999999).toString(2));
+console.log(0b100011100001101111001001101111110000010000000000000000);
+console.log(0.1 + 0.2);
